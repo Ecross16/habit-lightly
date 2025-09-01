@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { getMessageForUser } from "@/lib/bandit";
 import { useEffect, useState } from "react";
