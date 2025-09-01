@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperClass } from "swiper";
 import "swiper/css";
 
 export default function Home() {
@@ -27,10 +28,10 @@ export default function Home() {
       <Swiper
         spaceBetween={20}
         slidesPerView={1}
-        onSlideChange={(swiper) => setActiveDay(swiper.activeIndex)}
+        onSlideChange={(swiper: SwiperClass) => setActiveDay(swiper.activeIndex)}
         initialSlide={activeDay}
       >
-        {days.map((day, index) => (
+        {days.map((day) => (
           <SwiperSlide key={day}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
